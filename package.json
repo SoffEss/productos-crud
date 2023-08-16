@@ -1,0 +1,21 @@
+{
+  "name": "products-api",
+  "version": "1.0.0",
+  "description": "Products rest api for supermarket",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "products",
+    "rest",
+    "api",
+    "supermarket"
+  ],
+  "author": "Grupo 5",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.9",
+    "mongoose": "^7.4.3"
+  }
+}

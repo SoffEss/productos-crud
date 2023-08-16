@@ -1,0 +1,10 @@
+{
+    "db-connections": {
+        "mongodb": {
+            "host": "cloustermongo.yociozp.mongodb.net",
+            "user": "reddoenjeru",
+            "passwword": "NCtW7dUAxJyOVjwA",
+            "dbname": "ProductDB"
+        }
+    }
+}
