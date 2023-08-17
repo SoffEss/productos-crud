@@ -6,5 +6,9 @@
             "passwword": "NCtW7dUAxJyOVjwA",
             "dbname": "ProductDB"
         }
-    }
+    },
+    "secretkeys":{
+        "cryptojs":"s{7GK&K@VP2"
+    },
+    "server-port": 3000
 }
