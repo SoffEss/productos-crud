@@ -3,25 +3,25 @@
  * que crean, editan, eliminan y obtienen la información
  */
 const mongoose = require("mongoose");
-
+const db = require("../db-connection/mongodb")
 /** using schemas */
 const schema = require("../schemas/product.schema");
-
+db()
 schema.statics = {
-    create: function (data, cb){
+    create: function (data, cb) {
         let doc = new this(data);
-        doc.save(cb);
+        doc.save(cb); 
     },
-    getAll: function (query, cb){
+    getAll: function (query, cb) {
         this.find(query, cb);
     },
-    getByIdentifier: function (query, cb){
+    getByIdentifier: function (query, cb) {
         this.find(query, cb);
     },
-    update: function (query, data, cb){
-        this.findOneAndUpdate(query, {$set: data}, {new: true}, cb);
+    update: function (query, data, cb) {
+        this.findOneAndUpdate(query, { $set: data }, { new: true }, cb);
     },
-    delete: function (query, cb){
+    delete: function (query, cb) {
         this.findOneAndDelete(query);
     }
 };

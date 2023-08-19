@@ -1,6 +1,6 @@
 /** Dto */
 const dto = require("../../model/dto/products.dto");
-
+const notHelper= require("../helpers/notification.helper")
 exports.createProducts = (req, res, next) => {
     let pdt = {
         identifier: req.body.id,
@@ -11,7 +11,7 @@ exports.createProducts = (req, res, next) => {
         expiration_date: req.body.expiration_date,
         weight: req.body.weight
     };
-    dto.save(pdt, (err, data) =>{
+    dto.create(pdt, (err, data) =>{
         if(err){
             return res.status(400).json(
                 {
