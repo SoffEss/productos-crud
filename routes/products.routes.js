@@ -1,6 +1,14 @@
 const controller = require("../controller/logic/products.controller");
 
-exports.productsRoutes = (app) => {
+/**
+ * ERROR !
+ * exports.productsRoutes = (app) => {
+    app.get("/products", (req, res, next) => {
+        controller.getAll(req, res, next);
+    });
+ */
+
+module.exports = (app) => {
     app.get("/products", (req, res, next) => {
         controller.getAll(req, res, next);
     });

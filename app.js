@@ -7,12 +7,14 @@ const bodyParser= require("body-parser")
 
 const app = express();
 const port = config.get("server-port");
+const jsonParser= bodyParser.json()
 const ipfn= require("./middleware/getIpAdress")
 app.use("*", ipfn)
-const jsonParser= bodyParser.json()
+
 const ulrEncodedParser= bodyParser.urlencoded(
     {extended: true}
-)
+); // <-- faltaba ;
+
 app.use(jsonParser)
 
 app.use(ulrEncodedParser)

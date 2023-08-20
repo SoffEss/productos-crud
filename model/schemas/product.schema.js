@@ -5,8 +5,12 @@ const validator = require("mongoose-unique-validator");
 
 /**Schema creation */
 const productSchema = new mongoose.Schema({
+
+    // para los id en moongo se necesita que sea string
+    // porque con el codigo no se hacen operaciones matematicas
+
     identifier: {
-        type: "Number",
+        type: "String",
         required: true,
         unique: true
     },

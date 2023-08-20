@@ -1,6 +1,14 @@
 /** Dto */
 const dto = require("../../model/dto/products.dto");
-const notHelper= require("../helpers/notification.helper")
+
+const config = require("config");
+
+// un unico modelo producto no puede usar los helpers para contraseña,
+// habia que crear un modelo para usuario
+/** Helper */
+const helper = require("../helpers/general.helper");
+const notHelper = require("../helpers/notification.helper");
+
 exports.createProducts = (req, res, next) => {
     let pdt = {
         identifier: req.body.id,

@@ -1,14 +1,19 @@
 {
-    "db-connections": {
-        "mongodb": {
-            "host": "cloustermongo.yociozp.mongodb.net",
-            "user": "reddoenjeru",
-            "passwword": "NCtW7dUAxJyOVjwA",
-            "dbname": "ProductDB"
-        }
+        "db-connections": {
+            "mongodb": {
+                "host": "cloustermongo.yociozp.mongodb.net",
+                "user": "reddoenjeru",
+                "passwword": "NCtW7dUAxJyOVjwA",
+                "dbname": "ProductDB"
+            }
     },
     "secretkeys":{
         "cryptojs":"s{7GK&K@VP2"
     },
-    "server-port": 3000
-}
+
+    "roles": {
+    "product": 1
+    },
+    "server-port": 3000,
+    "sessionTime": 3600
+    }
